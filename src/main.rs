@@ -7,8 +7,8 @@ use macroquad::{
 
 #[allow(unused_imports)]
 use rustycs::{
-    force::{Force, GRAVITY_EARTH},
-    material,
+    entities::material,
+    environment::force::{Force, GRAVITY_EARTH},
 };
 
 use rustycs_macroquad_demo::{
@@ -39,7 +39,7 @@ fn window_config() -> Conf {
     conf
 }
 
-const WINDOW_SIZE: (i32, i32) = (1000, 1000);
+const WINDOW_SIZE: (i32, i32) = (1440, 900);
 const TICK_RATE: f32 = 256.;
 const FORCE: Force = GRAVITY_EARTH;
 

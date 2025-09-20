@@ -4,11 +4,12 @@ use std::mem;
 use macroquad::color::{Color, BLACK, WHITE};
 use rand::{thread_rng, Rng};
 use rustycs::{
-    attractor::*,
-    body::Body,
-    force::Force,
-    material::{self, Material},
-    world::World,
+    entities::{
+        attractor::*,
+        body::Body,
+        material::{self, Material},
+    },
+    environment::{force::Force, world::World},
 };
 
 use crate::rustycs_utility::{self as util, *};

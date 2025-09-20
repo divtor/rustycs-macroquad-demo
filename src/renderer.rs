@@ -13,8 +13,11 @@ use macroquad::{
 };
 
 use rustycs::{
-    attractor::AttractorType::*, body::BodyType::*, collision::Hitbox, maths::Vector2,
-    shapes::Shape::*, transforms::Transform, world::World,
+    collision::Hitbox,
+    entities::{attractor::AttractorType::*, body::BodyType::*, transform::Transform},
+    environment::world::World,
+    math::Vector2,
+    shapes::Shape::*,
 };
 
 use crate::{
@@ -68,7 +71,7 @@ pub fn render_world(
         let material_color = get_material_color(body.material.name);
 
         if let Some(name) = body.name {
-            let r = body.shape.as_circle().r;
+            let r = body.shape.copy_as_circle().r;
 
             let color = match name {
                 "mercury" => BROWN,
@@ -244,7 +247,7 @@ fn render_body_info(x: f32, y: f32, transform: &Transform) {
             y - 20. + (20. * idx as f32),
             FONT_SIZE,
             UI_TEXT_COLOR_PAUSED,
-        )
+        );
     }
 }
 

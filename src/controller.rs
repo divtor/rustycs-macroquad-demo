@@ -14,11 +14,13 @@ use macroquad::{
 
 // my own
 use rustycs::{
-    attractor::{Attractor, AttractorType::*},
-    body::Body,
-    material::{self},
-    maths::vector2::Vector2,
-    world::World,
+    entities::{
+        attractor::{Attractor, AttractorType::*},
+        body::Body,
+        material::{self},
+    },
+    environment::world::World,
+    math::vector2::Vector2,
 };
 
 use crate::{

@@ -12,10 +12,12 @@ use rand::{rngs::ThreadRng, thread_rng, Rng};
 use std::{fmt::Display, ops, time::Instant};
 
 use rustycs::{
-    attractor::{Attractor, AttractorType::*},
-    body::{Body, BodyType::*},
-    material,
-    maths::Vector2,
+    entities::{
+        attractor::{Attractor, AttractorType::*},
+        body::{Body, BodyType::*},
+        material,
+    },
+    math::Vector2,
     shapes::{Circle, Polygon, Shape, AABB},
 };
 
